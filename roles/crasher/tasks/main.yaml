@@ -1,0 +1,5 @@
+- name: Include host-specific tasks
+  include_tasks: "{{ lookup('first_found', file_list) }}"
+  vars:
+    file_list:
+      - "{{ inventory_hostname }}.yaml"

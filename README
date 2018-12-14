@@ -1,0 +1,7 @@
+Run:
+
+  ansible-playbook -i ./inventory.ini play.yaml
+
+To see this crash. If you edit roles/crasher/tasks/host2.yaml and
+comment out the include_tasks task and rerun as above this doesn't
+crash.

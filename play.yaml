@@ -1,0 +1,12 @@
+- hosts: "all"
+  name: "Try to crash this play"
+  roles:
+    - crasher
+    - doesitrun
+
+- hosts: "all"
+  name: "This play always runs"
+  tasks:
+    - name: This play always runs in subsequent play
+      debug:
+        msg: "I ran"

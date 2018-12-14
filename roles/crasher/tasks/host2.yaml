@@ -1,0 +1,11 @@
+- name: "Run on host2"
+  debug:
+    msg: "System {{ inventory_hostname }} ran host2"
+
+# Comment this task out and everything works as expected
+- name: Include host1 tasks
+  include_tasks: host1.yaml
+
+- name: "Post crash point"
+  debug:
+    msg: "System {{ inventory_hostname }} ran after crash point"

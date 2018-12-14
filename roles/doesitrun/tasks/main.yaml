@@ -1,0 +1,3 @@
+- name: "Check if things crashed"
+  debug:
+    msg: "System {{ inventory_hostname }} ran after the supposed crash"
